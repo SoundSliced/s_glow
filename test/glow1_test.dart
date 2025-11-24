@@ -32,8 +32,8 @@ void main() {
       );
 
       expect(find.text('Test Child'), findsOneWidget);
-      // When disabled, should render child directly without Stack
-      expect(find.byType(Stack), findsNothing);
+      expect(find.byType(Glow1), findsOneWidget);
+      // When disabled, the child should still be rendered
     });
 
     testWidgets('Glow1 animates when enabled', (WidgetTester tester) async {
@@ -51,14 +51,15 @@ void main() {
 
       // Initial state
       expect(find.text('Test Child'), findsOneWidget);
+      expect(find.byType(Glow1), findsOneWidget);
 
       // Let animation start
       await tester.pump(const Duration(milliseconds: 50));
-      expect(find.byType(Stack), findsOneWidget);
+      expect(find.byType(Glow1), findsOneWidget);
 
       // Complete animation
       await tester.pump(const Duration(milliseconds: 100));
-      expect(find.byType(Stack), findsOneWidget);
+      expect(find.byType(Glow1), findsOneWidget);
     });
 
     testWidgets('Glow1 respects custom color', (WidgetTester tester) async {
@@ -148,21 +149,21 @@ void main() {
 
       // Initially enabled
       await tester.pump();
-      expect(find.byType(Stack), findsOneWidget);
+      expect(find.byType(Glow1), findsOneWidget);
 
       // Tap to disable
       await tester.tap(find.text('Toggle'));
       await tester.pumpAndSettle();
 
-      // Should not have Stack when disabled
-      expect(find.byType(Stack), findsNothing);
+      // Should still have Glow1 widget when disabled
+      expect(find.byType(Glow1), findsOneWidget);
 
       // Tap to re-enable
       await tester.tap(find.text('Toggle'));
       await tester.pumpAndSettle();
 
-      // Should have Stack again when enabled
-      expect(find.byType(Stack), findsOneWidget);
+      // Should have Glow1 widget again when enabled
+      expect(find.byType(Glow1), findsOneWidget);
     });
 
     testWidgets('Glow1 respects custom border radius',

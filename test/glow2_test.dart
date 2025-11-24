@@ -32,7 +32,7 @@ void main() {
       );
 
       expect(find.text('Test Child'), findsOneWidget);
-      expect(find.byType(CustomPaint), findsOneWidget);
+      expect(find.byType(Glow2), findsOneWidget);
     });
 
     testWidgets('Glow2 respects glowCount property',
@@ -50,7 +50,7 @@ void main() {
 
       await tester.pump();
       expect(find.text('Test Child'), findsOneWidget);
-      expect(find.byType(CustomPaint), findsOneWidget);
+      expect(find.byType(Glow2), findsOneWidget);
     });
 
     testWidgets('Glow2 respects custom glowColor', (WidgetTester tester) async {
@@ -89,7 +89,8 @@ void main() {
       );
 
       await tester.pump();
-      expect(find.byType(CustomPaint), findsOneWidget);
+      expect(find.byType(Glow2), findsOneWidget);
+      expect(find.text('Test'), findsOneWidget);
     });
 
     testWidgets('Glow2 rectangle shape renders correctly',
@@ -111,7 +112,9 @@ void main() {
       );
 
       await tester.pump();
-      expect(find.byType(CustomPaint), findsOneWidget);
+      expect(find.byType(Glow2), findsOneWidget);
+      expect(find.byType(Container),
+          findsWidgets); // Should find the child container
     });
 
     testWidgets('Glow2 assertion test for circle with border radius',

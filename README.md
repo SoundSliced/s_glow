@@ -225,3 +225,7 @@ Christophe Chanteur
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for a detailed list of changes.
+
+## Repository
+
+https://github.com/SoundSliced/s_glow
