@@ -137,7 +137,7 @@ Glow2(
     backgroundImage: NetworkImage('https://example.com/avatar.jpg'),
   ),
   glowCount: 3,
-  glowColor: Colors.blue.withOpacity(0.5),
+  glowColor: Colors.blue.withValues(alpha: 0.5),
   glowShape: BoxShape.circle,
   duration: Duration(seconds: 2),
 )
@@ -158,7 +158,7 @@ Glow2(
   ),
   glowShape: BoxShape.rectangle,
   glowBorderRadius: BorderRadius.circular(16),
-  glowColor: Colors.red.withOpacity(0.3),
+  glowColor: Colors.red.withValues(alpha:0.3),
   glowCount: 2,
 )
 ```

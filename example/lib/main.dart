@@ -163,7 +163,7 @@ class _GlowExamplePageState extends State<GlowExamplePage> {
                 child: Glow2(
                   glowShape: BoxShape.rectangle,
                   glowBorderRadius: BorderRadius.circular(16),
-                  glowColor: Colors.red.withOpacity(0.5),
+                  glowColor: Colors.red.withValues(alpha: 0.5),
                   glowCount: 2,
                   child: Container(
                     width: 150,
@@ -214,7 +214,7 @@ class _GlowExamplePageState extends State<GlowExamplePage> {
               child: Center(
                 child: Glow2(
                   glowCount: 2,
-                  glowColor: Colors.cyan.withOpacity(0.4),
+                  glowColor: Colors.cyan.withValues(alpha: 0.4),
                   glowShape: BoxShape.circle,
                   duration: const Duration(seconds: 3),
                   child: CircleAvatar(
