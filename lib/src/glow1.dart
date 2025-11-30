@@ -172,8 +172,8 @@ class _Glow1State extends State<Glow1> {
                   child: Align(
                     alignment: widget.alignment,
                     child: Transform.scale(
-                      scaleX: scale * 0.95,
-                      scaleY: scale * 1.15,
+                      scaleX: scale * 1.1,
+                      scaleY: scale * 1.13,
                       alignment: Alignment.center,
                       child: Opacity(
                         opacity: opacity,
