@@ -1,23 +1,35 @@
-# glow1_2 Example
+# s_glow Example
 
-This example demonstrates the usage of the glow1_2 package, showcasing both Glow1 and Glow2 widgets with various configurations.
+This example demonstrates the usage of the s_glow package, showcasing both Glow1 and Glow2 widgets with various configurations.
 
 ## Features Demonstrated
 
-### Glow1 Examples
+### Glow1 Examples (Left Column)
 - Basic breathing glow effect
 - Custom color variations
 - Button with glow effect
 - Toggle glow on/off
 - Different animation durations and opacity levels
 
-### Glow2 Examples
+### Glow2 Examples (Right Column)
 - Basic ripple effect with circular shape
 - Multiple wave configurations
-- Rectangle shape with rounded corners
+- Rectangle shape with rounded corners and **interactive slider**
+- Real-time `glowRadiusFactor` adjustment (v1.1.0 feature)
 - Toggle ripple on/off
 - Avatar with ripple effect
 - Custom glow colors and durations
+
+## New in v1.1.0
+
+### Interactive Controls
+- **Adjustable Glow Factor**: Use the slider in the "Rectangle Shape with Adjustable Factor" example to see how `glowRadiusFactor` affects the glow expansion in real-time
+- **Side-by-Side Layout**: Glow1 and Glow2 examples are now displayed side by side for easy comparison
+
+### Visual Demonstrations
+The example app includes GIF recordings showing:
+- `glow1.gif` - Breathing effect animations
+- `glow2.gif` - Ripple effect animations
 
 ## Running the Example
 

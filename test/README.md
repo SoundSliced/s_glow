@@ -31,9 +31,11 @@ Tests for the Glow2 widget (ripple effect):
 - State change handling
 - Repeat flag behavior
 - Custom curves
-- Glow radius factor
+- Glow radius factor (v1.1.0: unified for both shapes)
+- Start inset factor (v1.1.0: controls where glow begins)
 - Duration customization
 - Widget update handling
+- Shape-aware expansion calculations (v1.1.0)
 
 ### glow1_2_test.dart
 Package-level tests:
@@ -81,6 +83,9 @@ The test suite covers:
 - ✅ Assertion tests
 - ✅ Widget lifecycle
 - ✅ User interactions
+- ✅ Shape-aware expansion (v1.1.0)
+- ✅ Start inset calculations (v1.1.0)
+- ✅ Unified glowRadiusFactor behavior (v1.1.0)
 
 ## Writing New Tests
 

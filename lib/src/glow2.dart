@@ -8,7 +8,7 @@ import 'package:states_rebuilder_extended/states_rebuilder_extended.dart';
 class Glow2 extends StatefulWidget {
   /// Creates an [Glow2] widget.
   const Glow2({
-    Key? key,
+    super.key,
     required this.child,
     this.glowCount = 2,
     this.glowColor = Colors.white,
@@ -21,11 +21,10 @@ class Glow2 extends StatefulWidget {
     this.curve = Curves.fastOutSlowIn,
     this.glowRadiusFactor = 0.5,
     this.startInsetFactor = 0.1,
-  })  : assert(
+  }) : assert(
           glowShape != BoxShape.circle || glowBorderRadius == null,
           'Cannot specify a border radius if the shape is a circle.',
-        ),
-        super(key: key);
+        );
 
   /// The child widget to display inside the glowing effect.
   final Widget child;

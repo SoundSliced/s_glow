@@ -2,6 +2,14 @@
 
 A Flutter package providing customizable glowing effects for widgets. This package includes two distinct glow widgets: **Glow1** for breathing/pulsating animations and **Glow2** for ripple/wave effects.
 
+## Visual Examples
+
+### Glow1 - Breathing Effect
+![Glow1 Example](https://raw.githubusercontent.com/SoundSliced/s_glow/main/example/assets/glow1.gif)
+
+### Glow2 - Ripple Effect
+![Glow2 Example](https://raw.githubusercontent.com/SoundSliced/s_glow/main/example/assets/glow2.gif)
+
 ## Features
 
 - 🌟 **Glow1**: Breathing glow effect with customizable scale and opacity animations (simple glow)
@@ -17,7 +25,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  s_glow: ^1.0.0
+  s_glow: ^1.1.0
 ```
 
 Then run:
@@ -93,6 +101,7 @@ Glow2(
   animate: true,
   repeat: true,
   glowRadiusFactor: 0.7,
+  startInsetFactor: 0.1, // Start glow 10% inside the borders
 )
 ```
 
@@ -110,7 +119,30 @@ Glow2(
 | `animate` | `bool` | `true` | Whether to animate the glow |
 | `repeat` | `bool` | `true` | Whether to repeat the animation continuously |
 | `curve` | `Curve` | `Curves.fastOutSlowIn` | Animation curve for the effect |
-| `glowRadiusFactor` | `double` | `0.7` | Factor determining the size of each glow wave |
+| `glowRadiusFactor` | `double` | `0.7` | For circles: % of radius; For rectangles: % of half-width/half-height |
+| `startInsetFactor` | `double` | `0.1` | How far inside borders the glow starts (0.0=border, 1.0=center) |
+
+## What's New in v1.1.0
+
+### Improved Glow2 Animation
+
+- **Smart Start Position**: Glow now starts slightly inside the widget borders (controlled by `startInsetFactor`) for a more polished appearance
+- **Shape-Aware Expansion**: 
+  - Circle glows expand based on radius percentage
+  - Rectangle glows expand proportionally based on width and height
+- **Simplified API**: Removed redundant `glowRectFactor` - now `glowRadiusFactor` intelligently adapts to both shapes
+- **Interactive Examples**: Try the live example app with real-time adjustment sliders
+
+### Example: Customizing Glow Start Position
+
+```dart
+Glow2(
+  glowShape: BoxShape.circle,
+  glowRadiusFactor: 0.3,  // Expand 30% of radius
+  startInsetFactor: 0.15, // Start 15% inside border
+  child: YourWidget(),
+)
+```
 
 ## Examples
 
