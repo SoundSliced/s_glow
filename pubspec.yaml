@@ -2,7 +2,7 @@ name: s_glow
 description: Customizable glowing effects for widgets with two distinct styles - Glow1 for breathing animations and Glow2 for ripple effects.
 issue_tracker: https://github.com/SoundSliced/s_glow/issues
 repository: https://github.com/SoundSliced/s_glow
-version: 1.1.0
+version: 2.0.0
 homepage: https://github.com/SoundSliced/s_glow
 
 environment:
@@ -12,8 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  soundsliced_tween_animation_builder: ^1.2.0
-  states_rebuilder_extended: ^1.0.3
+  s_packages: ^1.1.2
 
 dev_dependencies:
   flutter_test:
@@ -21,3 +20,4 @@ dev_dependencies:
   flutter_lints: ^6.0.0
 
 flutter:
+  uses-material-design: true

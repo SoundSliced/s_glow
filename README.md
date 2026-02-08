@@ -25,7 +25,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  s_glow: ^1.1.0
+  s_glow: ^2.0.0
 ```
 
 Then run:

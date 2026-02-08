@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:s_glow/s_glow.dart';
 
 void main() {
